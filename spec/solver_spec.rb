@@ -12,4 +12,10 @@ describe Solver do
       expect(solver.factorial(3)).to be 6
     end
   end
+  context "when testing reverse method" do
+    solver = Solver.new
+    it "reverse a given word using reverse method" do
+      expect(solver("hello")).to eql "olleh"
+    end
+  end
 end
