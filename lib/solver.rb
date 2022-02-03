@@ -1,7 +1,8 @@
 class Solver
   def factorial(number)
-    return 1 if number == 0
-    raise TypeError.new("Factorial of negative integer") unless number >= 0
+    return 1 if number.zero?
+    raise TypeError, 'Factorial of negative integer' unless number >= 0
+
     res = 1
     (1..number).each do |n|
       res *= n
@@ -14,14 +15,14 @@ class Solver
   end
 
   def fizzbuzz(number)
-    if (number % 5 == 0) && (number % 3 == 0)
-      "fizzbuzz"
-    elsif number % 3 == 0
-      "fizz"
-    elsif number % 5 == 0
-      "buzz"
-    else 
+    if (number % 5).zero? && (number % 3).zero?
+      'fizzbuzz'
+    elsif (number % 3).zero?
+      'fizz'
+    elsif (number % 5).zero?
+      'buzz'
+    else
       number.to_s
-    end    
+    end
   end
 end
