@@ -15,7 +15,7 @@ describe Solver do
   context "when testing reverse method" do
     solver = Solver.new
     it "reverse a given word using reverse method" do
-      expect(solver("hello")).to eql "olleh"
+      expect(solver.reverse("hello")).to eq "olleh"
     end
   end
 end
