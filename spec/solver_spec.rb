@@ -18,4 +18,19 @@ describe Solver do
       expect(solver.reverse("hello")).to eq "olleh"
     end
   end
+  context "when testing fizzbuzz method" do
+    solver = Solver.new
+    it "return fizz when it receives number divisible by 3." do
+      expect(solver.fizzbuzz(9)).to eq "fizz"
+    end
+    it "return buzz when it receives number divisible by 5." do
+      expect(solver.fizzbuzz(25)).to eq "buzz"
+    end
+    it "return fizzbuzz when it receives number divisible by 3 and 5" do
+      expect(solver.fizzbuzz(15)).to eq "fizzbuzz"
+    end
+    it "return same input as string when it receives number not divisible by 3 and 5" do
+      expect(solver.fizzbuzz(7)).to eq "7"
+    end
+  end
 end
